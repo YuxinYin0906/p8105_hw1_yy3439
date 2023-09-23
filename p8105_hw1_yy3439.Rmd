@@ -8,6 +8,7 @@ date: "2023-09-23"
 ```{r, eval = FALSE}
 install.packages("moderndive")
 library(moderndive)
+library(tidyverse)
 ```
 
 
@@ -19,4 +20,8 @@ data("early_january_weather")   #load the required dataset
 ```
 
 
+
+## Description
+
+The dataset `early_january_weather` has 15 variables: `origin`, `year`, `month`, `day`, `hour`, `temp`, `dewp`, `humid`, `wind_dir`, `wind_speed`, `wind_gust`, `precip`, `pressure`, `visib`, and `time_hour`. There are 13 numeric variables, 1 character variable, and 1 POSIXct variable. This dataset contains `nrow(early_january_weather)` and `ncol(early_january_weather)`. The mean temperature is 39.6. 
 

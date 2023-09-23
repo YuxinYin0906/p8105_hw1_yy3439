@@ -44,11 +44,13 @@ ggsave("scatter_plot.pdf")
 
 
 ```{r}
-mydata_df = tibble(
-  samp = rnorm(10),
-  vec_logical = samp > 0,
-  vec_char = c("apple", "sky", "bananna", "blueberries", "sun", "flag", "sea", "shirt", "cherry", "light"),
+mydata_df = tibble(        #create a dataframe consisting 
+  samp = rnorm(10),        #random sample of size 10 from normal distribution using rnorm function
+  vec_logical = samp > 0,  #a logical varible indicating weather each smaple is greater than 0 
+  vec_char = c("apple", "sky", "bananna", "blueberries", "sun", "flag", "sea", "shirt", "cherry", "light"),  
+  # a character variable consisting 10 elements
   vec_factor = factor(c("red", "blue","yellow", "blue", "yellow", "red", "blue", "blue", "red", "red"))
+  # a factor variable consisting of 3 levels: red, blue, and yellow
 )
 
 ```
@@ -58,14 +60,19 @@ mydata_df = tibble(
 
 
 ```{r, eval = FALSE}
-samp_mean <- pull(mydata_df, samp)
+samp_mean <- pull(mydata_df, samp) #pull the "samp" column out of the dataframe and take the mean of it 
 mean(samp_mean)
-ver_logicalmean <- pull(mydata_df, vec_logical)
-mean(ver_logicalmean)
-ver_charmean <- pull(mydata_df, vec_char)
-mean(ver_charmean)
-#ver_factormean <- pull(mydata_df, ver_factor)
-mean(ver_factormean)
+vec_logicalmean <- pull(mydata_df, vec_logical) #pull the "vec_logical" column out of the dataframe and take the mean of it 
+mean(vec_logicalmean)
+vec_charmean <- pull(mydata_df, vec_char) #pull the "vec_char" column out of the dataframe and take the mean of it 
+mean(vec_charmean)
+vec_factormean <- pull(mydata_df, vec_factor) #pull the "vec_factor" column out of the dataframe and take the mean of it 
+mean(vec_factormean)
 ```
 
 ## Discussion on Taking the Mean of Each Variable
+
+Based on the above code chunk and results, we can see that R can calculate the mean value of numerical variables and logical variables. Specifically, when calculating the average of a logical variable, R would treat "TRUE" as 1 and "FALSE" as 0. Therefore, when taking the average of a logical variable, we are actually seeing the proportion of "TRUE" values. However, when trying to take average of the character and factor variables, R gives the result "Warning: argument is not numeric ot logical: returning NA[1] NA. This indicates that R are only able to calculate the average of numerical and logical values by default. Further transformations are required if we are interested in taking the average of character and factor variables. 
+
+
+

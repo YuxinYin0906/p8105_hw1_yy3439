@@ -77,7 +77,7 @@ Based on the above code chunk and results, we can see that R can calculate the m
 
 
 
-##Transform to Numerical Variables
+## Transform to Numerical Variables
 
 
 ```{r, eval = FALSE}

@@ -54,13 +54,14 @@ mydata_df = tibble(        #create a dataframe consisting
                            #a factor variable consisting of 3 levels: red, blue, and yellow
 )
 
+mydata_df
 ```
 
 
 ## Taking the Mean of Each Variable
 
 
-```{r, eval = FALSE}
+```{r}
 samp_mean <- pull(mydata_df, samp) #pull the "samp" column out of the dataframe and take the mean of it 
 mean(samp_mean)
 vec_logicalmean <- pull(mydata_df, vec_logical) #pull the "vec_logical" column out of the dataframe and take the mean of it 

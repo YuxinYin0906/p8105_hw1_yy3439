@@ -51,8 +51,21 @@ mydata_df = tibble(
   vec_factor = factor(c("red", "blue","yellow", "blue", "yellow", "red", "blue", "blue", "red", "red"))
 )
 
-
 ```
 
 
+## Taking the Mean of Each Variable
 
+
+```{r, eval = FALSE}
+samp_mean <- pull(mydata_df, samp)
+mean(samp_mean)
+ver_logicalmean <- pull(mydata_df, vec_logical)
+mean(ver_logicalmean)
+ver_charmean <- pull(mydata_df, vec_char)
+mean(ver_charmean)
+#ver_factormean <- pull(mydata_df, ver_factor)
+mean(ver_factormean)
+```
+
+## Discussion on Taking the Mean of Each Variable

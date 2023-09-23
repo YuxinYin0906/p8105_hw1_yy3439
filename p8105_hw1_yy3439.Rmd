@@ -3,3 +3,20 @@ title: "p8105_hw1_yy3439"
 output: github_document
 date: "2023-09-23"
 ---
+## Preperation: Install and Load the package
+
+```{r, eval = FALSE}
+install.packages("moderndive")
+library(moderndive)
+```
+
+
+
+## Step 1: Load the `early_january_weather` dataset
+
+```{r}
+data("early_january_weather")   #load the required dataset
+```
+
+
+
